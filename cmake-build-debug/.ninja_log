@@ -1,0 +1,26 @@
+# ninja log v5
+3091	4920	1731607214205365321	CMakeFiles/AutoCorrect.dir/Font.cpp.o	efeff15663a6d809
+2292	4708	1731607839272541401	CMakeFiles/AutoCorrect.dir/Backspace.cpp.o	3d07eec130324c0d
+2596	2908	1731612333498888178	AutoCorrect	36d11162f2095736
+17	2596	1731612333178647852	CMakeFiles/AutoCorrect.dir/TextInput.cpp.o	46a2c23886961904
+2959	5317	1731607839879367813	CMakeFiles/AutoCorrect.dir/Cursor.cpp.o	773918d3a95e346e
+0	221	1743620774097319886	build.ninja	ade8874ad76624f
+19	3642	1731607838202798790	CMakeFiles/AutoCorrect.dir/FileReader.cpp.o	275c0079ee789e3c
+20	1481	1731608184903810375	CMakeFiles/AutoCorrect.dir/Word.cpp.o	d6e3a1fa9d9f85f6
+20	3778	1731607838338585814	CMakeFiles/AutoCorrect.dir/WordSort.cpp.o	e6b8fcafc1361f79
+17	2578	1731608271682239556	CMakeFiles/AutoCorrect.dir/main.cpp.o	21ff680699746239
+21	2958	1731607837510454128	CMakeFiles/AutoCorrect.dir/Heap.cpp.o	5dbfe8729a4693ea
+18	1659	1731606460189785187	CMakeFiles/AutoCorrect.dir/States.cpp.o	86b403743a75d26d
+21	2067	1731608185493334861	CMakeFiles/AutoCorrect.dir/AutoCorrect.cpp.o	5053cf7c4f931680
+7	3400	1743620795112719568	CMakeFiles/AutoCorrect.dir/Word.cpp.o	6a168f71ef9e2dab
+6	5258	1743620796973641103	CMakeFiles/AutoCorrect.dir/States.cpp.o	d53d21daaa70ca9d
+6	5525	1743620797245346790	CMakeFiles/AutoCorrect.dir/Cursor.cpp.o	64ce1239db55b3fb
+6	6038	1743620797757754605	CMakeFiles/AutoCorrect.dir/Font.cpp.o	8ea1a210fbf9ac5c
+5	6533	1743620798241278571	CMakeFiles/AutoCorrect.dir/main.cpp.o	e870d1b364e0c7d7
+7	6742	1743620798446651802	CMakeFiles/AutoCorrect.dir/TextInput.cpp.o	4bbcb70f8f443bb5
+3409	8483	1743620800200632957	CMakeFiles/AutoCorrect.dir/FileReader.cpp.o	a41f5cc1fa512558
+5259	8756	1743620800470940202	CMakeFiles/AutoCorrect.dir/Heap.cpp.o	7b12495f1fc0a49f
+6534	10118	1743620801843285375	CMakeFiles/AutoCorrect.dir/Backspace.cpp.o	d3c22cf9f3db9aca
+5525	10138	1743620801858609759	CMakeFiles/AutoCorrect.dir/WordSort.cpp.o	fdb4b75e2e228e89
+6039	10140	1743620801858861509	CMakeFiles/AutoCorrect.dir/AutoCorrect.cpp.o	fde86373345ae59b
+10141	10345	1743620802072430680	AutoCorrect	965245aa205c704e
