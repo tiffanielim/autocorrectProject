@@ -28,8 +28,9 @@ void Cursor::render(sf::RenderWindow& window)
 
 void Cursor::updatePosition(const sf::Text& text)
 {
+    //findCharacterPos gives pixel location of a specific character
     sf::Vector2f position = text.findCharacterPos(this->position);
-    cursor.setPosition(position.x + 2, position.y);
+    cursor.setPosition(position.x + 2, position.y); //so the cursor isn't on top of text
 }
 
 unsigned int Cursor::getPosition() const

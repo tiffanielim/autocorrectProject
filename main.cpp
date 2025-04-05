@@ -2,10 +2,12 @@
 #include "TextInput.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "AutoCorrect Text Input");
+//    sf::RenderWindow window(sf::VideoMode(800, 600), "AutoCorrect Text Input");
+    sf::RenderWindow window(sf::VideoMode(600, 760), "AutoCorrect Text Input");
 
     std::string babyGirlNames = "5000-baby-girl-names.txt";
-    TextInput textBox(400, 50, 200, 250, babyGirlNames);
+//    TextInput textBox(400, 50, 200, 250, babyGirlNames);
+    TextInput textBox(500, 40, 50, 250, babyGirlNames);
 
     sf::Clock clock;
     while (window.isOpen()) {

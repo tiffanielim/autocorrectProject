@@ -4,11 +4,13 @@
 
 #include "Backspace.h"
 
+//pushes new input state onto the stack
 void Backspace::saveState(const std::string& state)
 {
     states.push(state);
 }
 
+//returns the last saved state and removes it from the stack
 std::string Backspace::undo()
 {
     if (!states.empty())

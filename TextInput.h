@@ -2,6 +2,8 @@
 // Created by Tiffanie Lim on 11/5/24.
 //
 
+///handles input box logic including typing, cursor, undo, and suggestions
+
 #ifndef AUTOCORRECT_TEXTINPUT_H
 #define AUTOCORRECT_TEXTINPUT_H
 #include <SFML/Graphics.hpp>
@@ -28,18 +30,18 @@ private:
     std::vector<Word> suggestions;
     Heap suggestionsHeap;
 
-    void processInput(sf::Uint32 unicode);
-    void deleteCharacter();
-    void undo();
-    void updateSuggestions();
-    void displaySuggestions(sf::RenderWindow& window);
+    void processInput(sf::Uint32 unicode); //handles character typing and backspace
+    void deleteCharacter(); //removes character before cursor
+    void undo(); //reverts to previous state using Backspace
+    void updateSuggestions(); //refreshes suggestion list from AutoCorrect
+    void displaySuggestions(sf::RenderWindow& window); //draws suggestions below box
 
 public:
     TextInput(float width, float height, float x, float y, const std::string& wordBank);
 
-    void handleEvent(const sf::Event& event);
-    void update(sf::Time deltaTime);
-    void render(sf::RenderWindow& window);
+    void handleEvent(const sf::Event& event); //handles mouse, key, and typing events
+    void update(sf::Time deltaTime); //blinks cursor
+    void render(sf::RenderWindow& window); //draws text box and suggestions
 };
 
 #endif //AUTOCORRECT_TEXTINPUT_H

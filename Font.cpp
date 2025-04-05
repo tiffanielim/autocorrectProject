@@ -18,6 +18,7 @@ sf::Font & Font::getFont(const std::string &fontName)
 
 std::string Font::getFontPath(std::string fontName)
 {
+    //maps a font name string to its actual file name
     std::map<std::string, std::string> _map;
     _map["futura"] = "Futura-Medium.ttf";
     _map["arial"] = "arial.ttf";

@@ -2,6 +2,8 @@
 // Created by Tiffanie Lim on 11/4/24.
 //
 
+///loads and returns sf::Font objects using font name strings
+
 #ifndef CS8_CURSOR_FONT_H
 #define CS8_CURSOR_FONT_H
 //template <typename T, typename S>
@@ -17,8 +19,8 @@
 
 class Font {
 private:
-    inline static std::map<std::string, sf::Font> _fonts;
-    static void loadFont(const std::string& fontName);
+    inline static std::map<std::string, sf::Font> _fonts; //stores loaded fonts
+    static void loadFont(const std::string& fontName); //adds font to _fonts if not already loaded
     static std::string getFontPath(std::string fontName);
 
 public:

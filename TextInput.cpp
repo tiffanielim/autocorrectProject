@@ -22,11 +22,13 @@ TextInput::TextInput(float width, float height, float x, float y, const std::str
 
 void TextInput::handleEvent(const sf::Event& event)
 {
+    //handles text entry when active
     if (event.type == sf::Event::TextEntered)
     {
         if (isActive)
             processInput(event.text.unicode);
     }
+    //activates input box if clicked
     if (event.type == sf::Event::MouseButtonPressed)
     {
         if (box.getGlobalBounds().contains(event.mouseButton.x, event.mouseButton.y))
@@ -34,6 +36,7 @@ void TextInput::handleEvent(const sf::Event& event)
         else
             isActive = false;
     }
+    //handles ctrl+z or cmd+z undo
     if (event.type == sf::Event::KeyPressed)
     {
         if ((event.key.control || event.key.system) && event.key.code == sf::Keyboard::Z)
@@ -63,7 +66,7 @@ void TextInput::processInput(sf::Uint32 unicode)
         deleteCharacter();
     else if (unicode < 128 && content.length() < maxLength)
     {
-        backspace.saveState(content);
+        backspace.saveState(content); //saves state for undo
         content.insert(content.begin() + cursor.getPosition(), static_cast<char>(unicode));
         text.setString(content);
         cursor.moveRight();
@@ -77,8 +80,8 @@ void TextInput::deleteCharacter()
     unsigned int cursorPos = cursor.getPosition();
     if (!content.empty() && cursorPos > 0)
     {
-        backspace.saveState(content);
-        content.erase(cursorPos - 1, 1);
+        backspace.saveState(content); //same thing, saves state for undo
+        content.erase(cursorPos - 1, 1); //removes char before cursor
         cursor.moveLeft();
         text.setString(content);
         cursor.updatePosition(text);
@@ -93,7 +96,7 @@ void TextInput::undo()
     {
         content = previousState;
         text.setString(content);
-        cursor.setPosition(content.size());
+        cursor.setPosition(content.size()); //puts cursor at end
         cursor.updatePosition(text);
         updateSuggestions();
     }
@@ -102,7 +105,7 @@ void TextInput::undo()
 void TextInput::updateSuggestions()
 {
     suggestions = autoCorrect.getSortedWords(content);
-    suggestionsHeap = Heap();
+    suggestionsHeap = Heap(); //rebuilds heap with new words
 
     for (const auto& word : suggestions)
         suggestionsHeap.push(word);
